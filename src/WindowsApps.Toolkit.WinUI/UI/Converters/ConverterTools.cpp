@@ -30,6 +30,11 @@ bool ConverterTools::TryParseBool(IInspectable const& parameter)
 
 IInspectable ConverterTools::Convert(IInspectable const& value, TypeName const& targetType)
 {
+	auto type = TypeName{ winrt::get_class_name(value) };
+	if (type == targetType)
+	{
+		return value;
+	}
 	//TODO: check if value is targetype already to skip the convertion
 	return XamlBindingHelper::ConvertValue(targetType, value);
 }

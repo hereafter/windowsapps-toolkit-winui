@@ -4,6 +4,10 @@
 
 namespace winrt::WindowsApps::Toolkit::WinUI::Test::implementation
 {
+    using namespace winrt;
+    using namespace winrt::Windows::Foundation;
+    using namespace winrt::Microsoft::UI::Xaml;
+
     struct ConvertersPage : ConvertersPageT<ConvertersPage>
     {
         ConvertersPage();
@@ -11,7 +15,11 @@ namespace winrt::WindowsApps::Toolkit::WinUI::Test::implementation
         bool IsTestOn();
         hstring TestValue();
 
-        void OnButtonClick(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+        void OnButtonClick(IInspectable const& sender, RoutedEventArgs const& args);
+
+
+    private:
+        void TestBoolToObjectConverter();
     };
 }
 

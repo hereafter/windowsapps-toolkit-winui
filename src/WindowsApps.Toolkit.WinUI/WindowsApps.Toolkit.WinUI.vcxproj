@@ -142,6 +142,10 @@
       <DependentUpon>UI\Converters\BoolNegationConverter.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
+    <ClInclude Include="UI\Converters\BoolToObjectConverter.h">
+      <DependentUpon>UI\Converters\BoolToObjectConverter.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
     <ClInclude Include="UI\Converters\ConverterTools.h" />
     <ClInclude Include="UI\Converters\EmptyObjectToObjectConverter.h">
       <DependentUpon>UI\Converters\EmptyObjectToObjectConverter.idl</DependentUpon>
@@ -161,6 +165,10 @@
       <DependentUpon>UI\Converters\BoolNegationConverter.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
+    <ClCompile Include="UI\Converters\BoolToObjectConverter.cpp">
+      <DependentUpon>UI\Converters\BoolToObjectConverter.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
     <ClCompile Include="UI\Converters\ConverterTools.cpp" />
     <ClCompile Include="UI\Converters\EmptyObjectToObjectConverter.cpp">
       <DependentUpon>UI\Converters\EmptyObjectToObjectConverter.idl</DependentUpon>
@@ -176,6 +184,9 @@
       <SubType>Designer</SubType>
     </Midl>
     <Midl Include="UI\Converters\BoolNegationConverter.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="UI\Converters\BoolToObjectConverter.idl">
       <SubType>Designer</SubType>
     </Midl>
     <Midl Include="UI\Converters\EmptyObjectToObjectConverter.idl">

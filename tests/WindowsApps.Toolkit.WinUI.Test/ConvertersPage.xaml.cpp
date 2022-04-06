@@ -4,8 +4,6 @@
 #include "ConvertersPage.g.cpp"
 #endif
 
-#include <winrt/WindowsApps_Toolkit_WinUI_Test.h>
-
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
 using namespace winrt::WindowsApps::Toolkit::WinUI::UI::Converters;
@@ -37,13 +35,17 @@ void ConvertersPage::OnButtonClick(IInspectable const&, RoutedEventArgs const&)
 {
     myButton().Content(box_value(L"Clicked"));
 
-    EmptyObjectToObjectConverter converter{};
-    converter.EmptyValue(box_value(L"Collapsed"));
-    converter.NotEmptyValue(box_value(L"Visible"));
-    auto vc = converter.as<IValueConverter>();
+    this->TestBoolToObjectConverter();
+}
 
-    auto value = box_value(this->TestValue());
-    auto targetType = xaml_typename<winrt::Microsoft::UI::Xaml::Visibility>();
-    hstring language = L"";
-    auto v=unbox_value<winrt::Microsoft::UI::Xaml::Visibility>(vc.Convert(value, targetType, nullptr, language));
+
+void ConvertersPage::TestBoolToObjectConverter()
+{
+    auto&& convert = BoolToObjectConverter{};
+    convert.TrueValue(box_value(Visibility::Visible));
+    convert.FalseValue(box_value(Visibility::Collapsed));
+
+    auto source = box_value(Visibility::Visible);
+    hstring language{ L"" };
+    auto value=convert.ConvertBack(source, xaml_typename<Microsoft::UI::Xaml::Visibility>(), nullptr, language);
 }

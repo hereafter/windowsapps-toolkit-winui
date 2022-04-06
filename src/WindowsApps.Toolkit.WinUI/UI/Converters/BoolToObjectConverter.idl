@@ -1,0 +1,15 @@
+namespace WindowsApps.Toolkit.WinUI.UI.Converters
+{
+    runtimeclass BoolToObjectConverter :
+            Microsoft.UI.Xaml.DependencyObject,
+            [default]Microsoft.UI.Xaml.Data.IValueConverter
+    {
+        static Microsoft.UI.Xaml.DependencyProperty TrueValueProperty{ get; };
+        static Microsoft.UI.Xaml.DependencyProperty FalseValueProperty{ get; };
+
+        BoolToObjectConverter();
+
+        IInspectable TrueValue;
+        IInspectable FalseValue;
+    }
+}
