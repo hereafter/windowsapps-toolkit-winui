@@ -1,0 +1,18 @@
+namespace WindowsApps.Toolkit.WinUI.UI.Converters
+{
+    [default_interface]
+    runtimeclass EmptyObjectToObjectConverter : 
+        Microsoft.UI.Xaml.DependencyObject,
+        Microsoft.UI.Xaml.Data.IValueConverter
+    {
+        static Microsoft.UI.Xaml.DependencyProperty EmptyValueProperty{ get; };
+        static Microsoft.UI.Xaml.DependencyProperty NotEmptyValueProperty{ get; };
+
+        EmptyObjectToObjectConverter();
+
+        IInspectable EmptyValue;
+        IInspectable NotEmptyValue;
+
+        protected Boolean CheckValueIsEmpty(IInspectable value);
+    }
+}

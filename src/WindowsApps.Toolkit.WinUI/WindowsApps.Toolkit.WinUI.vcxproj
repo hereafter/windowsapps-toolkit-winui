@@ -143,6 +143,10 @@
       <SubType>Code</SubType>
     </ClInclude>
     <ClInclude Include="UI\Converters\ConverterTools.h" />
+    <ClInclude Include="UI\Converters\EmptyObjectToObjectConverter.h">
+      <DependentUpon>UI\Converters\EmptyObjectToObjectConverter.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Extensions\StringExtensions.cpp">
@@ -158,6 +162,10 @@
       <SubType>Code</SubType>
     </ClCompile>
     <ClCompile Include="UI\Converters\ConverterTools.cpp" />
+    <ClCompile Include="UI\Converters\EmptyObjectToObjectConverter.cpp">
+      <DependentUpon>UI\Converters\EmptyObjectToObjectConverter.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -168,6 +176,9 @@
       <SubType>Designer</SubType>
     </Midl>
     <Midl Include="UI\Converters\BoolNegationConverter.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="UI\Converters\EmptyObjectToObjectConverter.idl">
       <SubType>Designer</SubType>
     </Midl>
   </ItemGroup>

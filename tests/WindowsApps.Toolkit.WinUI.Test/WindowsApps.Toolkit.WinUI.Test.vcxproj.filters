@@ -58,8 +58,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config">
-      <Filter>Other Files</Filter>
-    </None>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

@@ -46,6 +46,9 @@
     <Midl Include="UI\Converters\BoolNegationConverter.idl">
       <Filter>UI\Converters</Filter>
     </Midl>
+    <Midl Include="UI\Converters\EmptyObjectToObjectConverter.idl">
+      <Filter>UI\Converters</Filter>
+    </Midl>
   </ItemGroup>
   <ItemGroup>
     <None Include="WindowsApps.Toolkit.WinUI.def">
