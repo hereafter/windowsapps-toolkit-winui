@@ -1,0 +1,9 @@
+namespace WindowsApps.Toolkit.WinUI.Extensions
+{
+    [bindable]
+    [default_interface]
+    runtimeclass StringExtensions 
+    {
+        StringExtensions();
+    }
+}

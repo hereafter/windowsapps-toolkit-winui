@@ -11,9 +11,11 @@
     <Filter Include="Other Files">
       <UniqueIdentifier>{a0b45ecc-32c9-4dda-a689-3a171d830241}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Extensions">
+      <UniqueIdentifier>{5bef662f-889a-495a-9f99-10664f579130}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Class.cpp" />
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp">
       <Filter>Other Files</Filter>
     </ClCompile>
@@ -23,6 +25,9 @@
   </ItemGroup>
   <ItemGroup>
     <Midl Include="Class.idl" />
+    <Midl Include="Extensions\StringExtensions.idl">
+      <Filter>Extensions</Filter>
+    </Midl>
   </ItemGroup>
   <ItemGroup>
     <None Include="WindowsApps.Toolkit.WinUI.def">
