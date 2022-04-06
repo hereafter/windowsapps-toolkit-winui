@@ -138,6 +138,11 @@
       <SubType>Code</SubType>
     </ClInclude>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="UI\Converters\BoolNegationConverter.h">
+      <DependentUpon>UI\Converters\BoolNegationConverter.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="UI\Converters\ConverterTools.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Extensions\StringExtensions.cpp">
@@ -148,6 +153,11 @@
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
+    <ClCompile Include="UI\Converters\BoolNegationConverter.cpp">
+      <DependentUpon>UI\Converters\BoolNegationConverter.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="UI\Converters\ConverterTools.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -155,6 +165,9 @@
   </ItemGroup>
   <ItemGroup>
     <Midl Include="Extensions\StringExtensions.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="UI\Converters\BoolNegationConverter.idl">
       <SubType>Designer</SubType>
     </Midl>
   </ItemGroup>

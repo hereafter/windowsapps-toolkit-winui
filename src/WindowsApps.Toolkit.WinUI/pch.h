@@ -13,4 +13,8 @@
 #include <winrt/Microsoft.UI.Dispatching.h>
 #include <wil/cppwinrt_helpers.h>
 
+#include <winrt/Windows.UI.Xaml.Interop.h>
+
 //classes that can be used in XAML
+
+#include "UI/Converters/BoolNegationConverter.h"
