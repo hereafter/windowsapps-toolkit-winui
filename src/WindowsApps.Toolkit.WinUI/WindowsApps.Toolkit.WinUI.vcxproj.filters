@@ -8,23 +8,31 @@
     <Filter Include="Generated Files">
       <UniqueIdentifier>{926ab91d-31b4-48c3-b9a4-e681349f27f0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Other Files">
+      <UniqueIdentifier>{a0b45ecc-32c9-4dda-a689-3a171d830241}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pch.cpp" />
     <ClCompile Include="Class.cpp" />
-    <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="pch.h" />
+    <ClCompile Include="$(GeneratedFilesDir)module.g.cpp">
+      <Filter>Other Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Other Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Midl Include="Class.idl" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="WindowsApps_Toolkit_WinUI.def" />
+    <None Include="WindowsApps.Toolkit.WinUI.def">
+      <Filter>Other Files</Filter>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="readme.txt" />
+    <ClInclude Include="pch.h">
+      <Filter>Other Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
