@@ -1,9 +1,9 @@
 namespace WindowsApps.Toolkit.WinUI.Extensions
 {
-    [bindable]
     [default_interface]
-    runtimeclass StringExtensions 
+    static runtimeclass StringExtensions
     {
-        StringExtensions();
+        static String GetLocalized(String resourceKey);
+        static String GetLocalized(String resourceKey, Windows.UI.UIContext uiContext);
     }
 }
