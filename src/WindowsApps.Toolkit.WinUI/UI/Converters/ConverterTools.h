@@ -1,6 +1,6 @@
 #pragma once
 
-static class ConverterTools
+class ConverterTools
 {
 };
 

@@ -14,8 +14,8 @@ namespace winrt::WindowsApps::Toolkit::WinUI::UI::Converters::implementation
         BoolNegationConverter() = default;
 
     public: //IValueConverter
-        IInspectable Convert(IInspectable const& value, TypeName const& targetType, IInspectable const& parameter, hstring const& language);
-        IInspectable ConvertBack(IInspectable const& value, TypeName const& targetType, IInspectable const& parameter, hstring const& language);
+        IInspectable Convert(IInspectable const& value, TypeName const&, IInspectable const&, hstring const&);
+        IInspectable ConvertBack(IInspectable const& value, TypeName const&, IInspectable const&, hstring const&);
     };
 }
 
