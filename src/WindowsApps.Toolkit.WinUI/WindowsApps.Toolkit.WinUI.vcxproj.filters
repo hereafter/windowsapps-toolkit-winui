@@ -14,6 +14,12 @@
     <Filter Include="Extensions">
       <UniqueIdentifier>{5bef662f-889a-495a-9f99-10664f579130}</UniqueIdentifier>
     </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{25e6c1a4-9e96-45d9-b024-bb384367ac38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Converters">
+      <UniqueIdentifier>{bc20aaff-f013-4b5c-a0c8-ba950e85645b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp">

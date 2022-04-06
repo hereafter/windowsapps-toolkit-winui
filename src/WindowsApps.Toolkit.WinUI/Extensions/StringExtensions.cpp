@@ -31,7 +31,7 @@ hstring StringExtensions::GetLocalized(hstring const& resourceKey)
 	return StringExtensions::GetLocalized(resourceKey, context);
 }
 
-hstring StringExtensions::GetLocalized(hstring const& resourceKey, Windows::UI::UIContext uiContext)
+hstring StringExtensions::GetLocalized(hstring const& resourceKey, UIContext uiContext)
 {
 	if (uiContext != nullptr)
 	{
@@ -53,4 +53,24 @@ hstring StringExtensions::GetLocalized(hstring const& resourceKey, hstring const
 		if (result.size() != 0) return result;
 	}
 	return ResourceLoader::GetForViewIndependentUse(resourcePath).GetString(resourceKey);
+}
+
+
+hstring StringExtensions::GetViewLocalized(hstring const& resourceKey)
+{
+	UIContext context{ nullptr };
+	return StringExtensions::GetViewLocalized(resourceKey, context);
+}
+
+hstring StringExtensions::GetViewLocalized(hstring const& resourceKey, UIContext uiContext)
+{
+	if (uiContext != nullptr)
+	{
+		auto resourceLoader = ResourceLoader::GetForUIContext(uiContext);
+		return resourceLoader.GetString(resourceKey);
+	}
+	else
+	{
+		return ResourceLoader::GetForCurrentView().GetString(resourceKey);
+	}
 }

@@ -20,6 +20,9 @@ namespace winrt::WindowsApps::Toolkit::WinUI::Extensions::implementation
         static hstring GetLocalized(hstring const& resourceKey, Windows::UI::UIContext uiContext);
         static hstring GetLocalized(hstring const& resourceKey, hstring const& resourcePath);
 
+        static hstring GetViewLocalized(hstring const& resourceKey);
+        static hstring GetViewLocalized(hstring const& resourceKey, Windows::UI::UIContext uiContext);
+
 
     private:
         static ResourceLoader& IndependentLoader();

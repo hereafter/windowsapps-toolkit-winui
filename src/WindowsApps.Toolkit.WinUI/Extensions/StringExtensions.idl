@@ -5,5 +5,10 @@ namespace WindowsApps.Toolkit.WinUI.Extensions
     {
         static String GetLocalized(String resourceKey);
         static String GetLocalized(String resourceKey, Windows.UI.UIContext uiContext);
+        [default_overload]
+        static String GetLocalized(String resourceKey, String resourcePath);
+
+        static String GetViewLocalized(String resourceKey);
+        static String GetViewLocalized(String resourceKey, Windows.UI.UIContext uiContext);
     }
 }
