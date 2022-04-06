@@ -1,7 +1,8 @@
 namespace WindowsApps.Toolkit.WinUI.UI.Converters
-{
-    [default_interface]
-    runtimeclass BoolNegationConverter : Microsoft.UI.Xaml.DependencyObject, Microsoft.UI.Xaml.Data.IValueConverter
+{    
+    runtimeclass BoolNegationConverter : 
+            Microsoft.UI.Xaml.DependencyObject,
+            [default]Microsoft.UI.Xaml.Data.IValueConverter
     {
         BoolNegationConverter();
     }

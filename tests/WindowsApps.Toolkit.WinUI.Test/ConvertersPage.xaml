@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="WindowsApps.Toolkit.WinUI.Test.ConvertersPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WindowsApps.Toolkit.WinUI.Test"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid>
+        <StackPanel Margin="10">
+            <ToggleSwitch IsOn="{x:Bind IsTestOn}" />
+            <ToggleSwitch IsOn="{x:Bind IsTestOn, Converter={StaticResource BoolNegationConverter}}" />
+            <TextBlock Text="{x:Bind TestValue}" />
+            <TextBlock Text="TRUE" Visibility="{x:Bind TestValue, 
+                Converter={StaticResource EmptyObjectToObjectConverter}}"  />
+            <TextBlock Text="FALSE" Visibility="{x:Bind TestValue, 
+                Converter={StaticResource EmptyObjectToObjectConverter}, 
+                ConverterParameter=True}"   />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="myButton" Click="OnButtonClick">Click Me</Button>
+        </StackPanel>
+    </Grid>
+</Page>

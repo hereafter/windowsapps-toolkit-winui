@@ -4,29 +4,19 @@
 #include "MainWindow.g.cpp"
 #endif
 
+#include "ConvertersPage.g.h"
+
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
+using namespace Windows::UI::Xaml::Interop;
 
+using namespace winrt::WindowsApps::Toolkit::WinUI::Test::implementation;
 
-namespace winrt::WindowsApps::Toolkit::WinUI::Test::implementation
+MainWindow::MainWindow()
 {
-    MainWindow::MainWindow()
-    {
-        InitializeComponent();
-    }
+    InitializeComponent();
 
-    int32_t MainWindow::MyProperty()
-    {
-        throw hresult_not_implemented();
-    }
-
-    void MainWindow::MyProperty(int32_t /* value */)
-    {
-        throw hresult_not_implemented();
-    }
-
-    void MainWindow::myButton_Click(IInspectable const&, RoutedEventArgs const&)
-    {
-        myButton().Content(box_value(L"Clicked"));
-    }
+    this->ContentFrame().Navigate(xaml_typename<ConvertersPage>());
 }
+
+

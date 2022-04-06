@@ -17,4 +17,7 @@
 
 //classes that can be used in XAML
 
-#include "UI/Converters/BoolNegationConverter.h"
+//#include "UI/Converters/BoolNegationConverter.h"
+//#include "UI/Converters/EmptyObjectToObjectConverter.h"
+
+#include "UI.Converters.EmptyObjectToObjectConverter.g.h"

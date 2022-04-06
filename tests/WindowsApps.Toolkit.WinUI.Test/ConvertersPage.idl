@@ -1,0 +1,11 @@
+namespace WindowsApps.Toolkit.WinUI.Test
+{
+    [default_interface]
+    runtimeclass ConvertersPage : Microsoft.UI.Xaml.Controls.Page
+    {
+        ConvertersPage();
+        
+        Boolean IsTestOn{ get; };
+        String TestValue{ get; };
+    }
+}

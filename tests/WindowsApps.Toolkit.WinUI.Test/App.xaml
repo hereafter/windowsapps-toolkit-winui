@@ -1,9 +1,14 @@
 ﻿<Application
     x:Class="WindowsApps.Toolkit.WinUI.Test.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="using:WindowsApps.Toolkit.WinUI.UI.Converters">
     <Application.Resources>
         <ResourceDictionary>
+            <converters:BoolNegationConverter x:Key="BoolNegationConverter" />
+            <converters:EmptyObjectToObjectConverter x:Key="EmptyObjectToObjectConverter"
+                                                     EmptyValue="Collapsed"
+                                                     NotEmptyValue="Visible"/>
             <ResourceDictionary.MergedDictionaries>
                 <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
                 <!-- Other merged dictionaries here -->

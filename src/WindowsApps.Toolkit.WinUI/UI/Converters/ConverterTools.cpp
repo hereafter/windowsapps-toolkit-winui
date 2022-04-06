@@ -13,17 +13,14 @@ using namespace winrt::Microsoft::UI::Xaml::Markup;
 bool ConverterTools::TryParseBool(IInspectable const& parameter)
 {
 	auto parsed = false;
+	
 	if (parameter)
 	{
-		auto ts=parameter.as<IStringable>();
-		if (ts)
+		auto s=unbox_value_or(parameter, L"false");
+		
+		if (s == L"True" || s == L"1" || s == L"true")
 		{
-			auto s = ts.ToString();
-			JsonValue v{nullptr};
-			if (JsonValue::TryParse(s, v))
-			{
-				parsed=v.GetBoolean();
-			}
+			parsed = true;
 		}
 	}
 
