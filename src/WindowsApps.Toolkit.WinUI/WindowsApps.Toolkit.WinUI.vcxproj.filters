@@ -63,6 +63,9 @@
     <Midl Include="UI\Converters\CollectionVisibilityConverter.idl">
       <Filter>UI\Converters</Filter>
     </Midl>
+    <Midl Include="UI\Converters\StringVisibilityConverter.idl">
+      <Filter>UI\Converters</Filter>
+    </Midl>
   </ItemGroup>
   <ItemGroup>
     <None Include="WindowsApps.Toolkit.WinUI.def">

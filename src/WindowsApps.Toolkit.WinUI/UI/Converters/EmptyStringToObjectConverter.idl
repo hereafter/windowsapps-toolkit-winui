@@ -3,7 +3,7 @@ import "UI/Converters/EmptyObjectToObjectConverter.idl";
 namespace WindowsApps.Toolkit.WinUI.UI.Converters
 {
     [default_interface]
-    runtimeclass EmptyStringToObjectConverter :
+    unsealed runtimeclass EmptyStringToObjectConverter :
                 EmptyObjectToObjectConverter
     {
         EmptyStringToObjectConverter();

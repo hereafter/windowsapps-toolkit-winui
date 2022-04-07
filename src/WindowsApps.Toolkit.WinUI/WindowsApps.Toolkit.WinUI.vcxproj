@@ -167,6 +167,10 @@
       <DependentUpon>UI\Converters\EmptyStringToObjectConverter.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
+    <ClInclude Include="UI\Converters\StringVisibilityConverter.h">
+      <DependentUpon>UI\Converters\StringVisibilityConverter.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Extensions\StringExtensions.cpp">
@@ -206,6 +210,10 @@
       <DependentUpon>UI\Converters\EmptyStringToObjectConverter.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
+    <ClCompile Include="UI\Converters\StringVisibilityConverter.cpp">
+      <DependentUpon>UI\Converters\StringVisibilityConverter.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -234,6 +242,9 @@
       <SubType>Designer</SubType>
     </Midl>
     <Midl Include="UI\Converters\EmptyStringToObjectConverter.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="UI\Converters\StringVisibilityConverter.idl">
       <SubType>Designer</SubType>
     </Midl>
   </ItemGroup>
