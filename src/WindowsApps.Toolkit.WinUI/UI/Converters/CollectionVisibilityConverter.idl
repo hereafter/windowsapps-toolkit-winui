@@ -1,0 +1,10 @@
+import "UI/Converters/EmptyCollectionToObjectConverter.idl";
+
+namespace WindowsApps.Toolkit.WinUI.UI.Converters
+{
+    [default_interface]
+    runtimeclass CollectionVisibilityConverter : EmptyCollectionToObjectConverter
+    {
+        CollectionVisibilityConverter();
+    }
+}
