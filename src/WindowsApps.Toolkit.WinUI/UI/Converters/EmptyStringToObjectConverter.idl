@@ -1,0 +1,11 @@
+import "UI/Converters/EmptyObjectToObjectConverter.idl";
+
+namespace WindowsApps.Toolkit.WinUI.UI.Converters
+{
+    [default_interface]
+    runtimeclass EmptyStringToObjectConverter :
+                EmptyObjectToObjectConverter
+    {
+        EmptyStringToObjectConverter();
+    }
+}
