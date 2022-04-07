@@ -57,6 +57,9 @@
     <Midl Include="UI\Converters\EmptyStringToObjectConverter.idl">
       <Filter>UI\Converters</Filter>
     </Midl>
+    <Midl Include="UI\Converters\EmptyCollectionToObjectConverter.idl">
+      <Filter>UI\Converters</Filter>
+    </Midl>
   </ItemGroup>
   <ItemGroup>
     <None Include="WindowsApps.Toolkit.WinUI.def">
