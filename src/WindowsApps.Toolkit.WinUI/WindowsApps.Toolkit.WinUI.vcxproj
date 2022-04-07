@@ -155,6 +155,10 @@
       <SubType>Code</SubType>
     </ClInclude>
     <ClInclude Include="UI\Converters\ConverterTools.h" />
+    <ClInclude Include="UI\Converters\DoubleToObjectConverter.h">
+      <DependentUpon>UI\Converters\DoubleToObjectConverter.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
     <ClInclude Include="UI\Converters\EmptyCollectionToObjectConverter.h">
       <DependentUpon>UI\Converters\EmptyCollectionToObjectConverter.idl</DependentUpon>
       <SubType>Code</SubType>
@@ -198,6 +202,10 @@
       <SubType>Code</SubType>
     </ClCompile>
     <ClCompile Include="UI\Converters\ConverterTools.cpp" />
+    <ClCompile Include="UI\Converters\DoubleToObjectConverter.cpp">
+      <DependentUpon>UI\Converters\DoubleToObjectConverter.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
     <ClCompile Include="UI\Converters\EmptyCollectionToObjectConverter.cpp">
       <DependentUpon>UI\Converters\EmptyCollectionToObjectConverter.idl</DependentUpon>
       <SubType>Code</SubType>
@@ -233,6 +241,9 @@
       <SubType>Designer</SubType>
     </Midl>
     <Midl Include="UI\Converters\CollectionVisibilityConverter.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="UI\Converters\DoubleToObjectConverter.idl">
       <SubType>Designer</SubType>
     </Midl>
     <Midl Include="UI\Converters\EmptyCollectionToObjectConverter.idl">

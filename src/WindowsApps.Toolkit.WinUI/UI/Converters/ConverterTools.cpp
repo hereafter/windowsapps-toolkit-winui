@@ -18,7 +18,7 @@ bool ConverterTools::TryParseBool(IInspectable const& parameter)
 	{
 		auto s=unbox_value_or(parameter, L"false");
 		
-		if (s == L"True" || s == L"1" || s == L"true")
+		if (s == L"True" || s == L"1" || s == L"true" || s== L"TRUE")
 		{
 			parsed = true;
 		}

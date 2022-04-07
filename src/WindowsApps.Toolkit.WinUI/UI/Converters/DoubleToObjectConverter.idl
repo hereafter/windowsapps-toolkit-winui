@@ -1,0 +1,23 @@
+namespace WindowsApps.Toolkit.WinUI.UI.Converters
+{
+    [bindable]
+    unsealed runtimeclass DoubleToObjectConverter : Microsoft.UI.Xaml.DependencyObject, 
+        [default]Microsoft.UI.Xaml.Data.IValueConverter
+    {
+        DoubleToObjectConverter();
+
+        static Microsoft.UI.Xaml.DependencyProperty TrueValueProperty{ get; };
+        static Microsoft.UI.Xaml.DependencyProperty FalseValueProperty{ get; };
+        static Microsoft.UI.Xaml.DependencyProperty NullValueProperty{ get; };
+
+        static Microsoft.UI.Xaml.DependencyProperty GreaterThanProperty{ get; };
+        static Microsoft.UI.Xaml.DependencyProperty LessThanProperty{ get; };
+
+        IInspectable TrueValue;
+        IInspectable FalseValue;
+        IInspectable NullValue;
+
+        Double GreaterThan;
+        Double LessThan;
+    }
+}
