@@ -10,6 +10,11 @@
         <StackPanel Margin="10">
             <ToggleSwitch IsOn="{x:Bind IsTestOn}" />
             <ToggleSwitch IsOn="{x:Bind IsTestOn, Converter={StaticResource BoolNegationConverter}}" />
+
+            <ToggleSwitch IsOn="{x:Bind IsTestOn}" Visibility="{x:Bind IsTestOn, Converter={StaticResource BoolToVisibilityConverter}}" />
+            <ToggleSwitch IsOn="{x:Bind IsTestOn}" Visibility="{x:Bind IsTestOn, Converter={StaticResource BoolToVisibilityConverter},
+                ConverterParameter=True}" />
+
             <TextBlock Text="{x:Bind TestValue}" />
             <TextBlock Text="TRUE" Visibility="{x:Bind TestValue, 
                 Converter={StaticResource EmptyObjectToObjectConverter}}"  />

@@ -19,4 +19,5 @@
 
 #include "UI.Converters.BoolNegationConverter.g.h"
 #include "UI.Converters.BoolToObjectConverter.g.h"
+#include "UI.Converters.BoolToVisibilityConverter.g.h"
 #include "UI.Converters.EmptyObjectToObjectConverter.g.h"

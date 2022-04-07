@@ -9,6 +9,7 @@
             <converters:EmptyObjectToObjectConverter x:Key="EmptyObjectToObjectConverter"
                                                      EmptyValue="Collapsed"
                                                      NotEmptyValue="Visible"/>
+            <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
             <ResourceDictionary.MergedDictionaries>
                 <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
                 <!-- Other merged dictionaries here -->

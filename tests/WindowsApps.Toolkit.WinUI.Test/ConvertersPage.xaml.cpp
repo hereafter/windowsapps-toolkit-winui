@@ -22,7 +22,7 @@ ConvertersPage::ConvertersPage()
 
 bool ConvertersPage::IsTestOn()
 {
-    return true;
+    return false;
 }
 
 hstring ConvertersPage::TestValue()
