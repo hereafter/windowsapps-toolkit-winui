@@ -78,7 +78,7 @@ IInspectable BoolToObjectConverter::Convert(IInspectable const& value, TypeName 
 	return ConverterTools::Convert(boolValue ? TrueValue() : FalseValue(), targetType);
 }
 
-IInspectable BoolToObjectConverter::ConvertBack(IInspectable const& value, TypeName const& targetType, IInspectable const& parameter, hstring const&)
+IInspectable BoolToObjectConverter::ConvertBack(IInspectable const& value, TypeName const&, IInspectable const& parameter, hstring const&)
 {
 	TypeName valueType{ winrt::get_class_name(value) };
 	auto tmp = ConverterTools::Convert(TrueValue(), valueType);

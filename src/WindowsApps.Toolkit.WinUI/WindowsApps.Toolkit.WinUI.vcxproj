@@ -179,6 +179,10 @@
       <DependentUpon>UI\Converters\StringVisibilityConverter.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
+    <ClInclude Include="UI\Converters\VisibilityToBoolConverter.h">
+      <DependentUpon>UI\Converters\VisibilityToBoolConverter.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Extensions\StringExtensions.cpp">
@@ -230,6 +234,10 @@
       <DependentUpon>UI\Converters\StringVisibilityConverter.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
+    <ClCompile Include="UI\Converters\VisibilityToBoolConverter.cpp">
+      <DependentUpon>UI\Converters\VisibilityToBoolConverter.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -267,6 +275,9 @@
       <SubType>Designer</SubType>
     </Midl>
     <Midl Include="UI\Converters\StringVisibilityConverter.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="UI\Converters\VisibilityToBoolConverter.idl">
       <SubType>Designer</SubType>
     </Midl>
   </ItemGroup>
