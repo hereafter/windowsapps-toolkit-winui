@@ -12,6 +12,7 @@ class ConverterTools
 {
 public:
 	static bool TryParseBool(IInspectable const& parameter);
+	static double TryParseDouble(IInspectable const& value);
 	static IInspectable Convert(IInspectable const& value, TypeName const& targetType);
 };
 

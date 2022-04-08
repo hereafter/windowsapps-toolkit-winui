@@ -4,6 +4,7 @@
 #include "UI.Converters.DoubleToObjectConverter.g.cpp"
 #endif
 
+#include "ConverterTools.h"
 
 using namespace winrt;
 using namespace winrt::Windows::Foundation;
@@ -11,6 +12,7 @@ using namespace winrt::Windows::UI::Xaml::Interop;
 using namespace winrt::Microsoft::UI::Xaml;
 using namespace winrt::WindowsApps::Toolkit::WinUI::UI::Converters::implementation;
 
+using namespace ::WindowsApps::Toolkit::WinUI::UI::Converters::Internals;
 
 #pragma region Properties
 #define __WATWUIC winrt::WindowsApps::Toolkit::WinUI::UI::Converters
@@ -29,7 +31,6 @@ DependencyProperty DoubleToObjectConverter::__falseValueProperty = DependencyPro
 	PropertyMetadata{ nullptr }
 );
 
-
 DependencyProperty DoubleToObjectConverter::__nullValueProperty = DependencyProperty::Register(
 	L"NullValue",
 	xaml_typename<IInspectable>(),
@@ -37,14 +38,12 @@ DependencyProperty DoubleToObjectConverter::__nullValueProperty = DependencyProp
 	PropertyMetadata{ nullptr }
 );
 
-
 DependencyProperty DoubleToObjectConverter::__greaterThanProperty = DependencyProperty::Register(
 	L"GreaterThan",
 	xaml_typename<double>(),
 	xaml_typename<__WATWUIC::DoubleToObjectConverter>(),
 	PropertyMetadata{ box_value(NAN) }
 );
-
 
 DependencyProperty DoubleToObjectConverter::__lessThanProperty = DependencyProperty::Register(
 	L"LessThan",
@@ -134,24 +133,37 @@ void DoubleToObjectConverter::LessThan(double value)
 
 
 
-IInspectable DoubleToObjectConverter::Convert(IInspectable const& value, TypeName const& targetType, IInspectable const& parameter, hstring const& language)
+IInspectable DoubleToObjectConverter::Convert(IInspectable const& value, TypeName const& targetType, IInspectable const& parameter, hstring const&)
 {
 	if (!value) return this->NullValue();
 
-	double vd = 0.0;
+	auto&& greaterThan = this->GreaterThan();
+	auto&& lessThan = this->LessThan();
 
-	auto pv = value.try_as<IPropertyValue>();
-	auto type = pv.Type();
+	double vd = ConverterTools::TryParseDouble(value);
+	bool boolValue = false;
 
-	switch (type)
+	if (greaterThan != NAN && lessThan != NAN &&
+		vd > greaterThan && vd < lessThan)
 	{
-	default:
-		vd = 0.0f;
+		boolValue = true;
+	}
+	else if (greaterThan != NAN && vd > greaterThan)
+	{
+		boolValue = true;
+	}
+	else if (lessThan !=NAN && vd < lessThan)
+	{
+		boolValue = true;
 	}
 
+	// Negate if needed
+	if (parameter && ConverterTools::TryParseBool(parameter))
+	{
+		boolValue = !boolValue;
+	}
 
-
-	return nullptr;
+	return ConverterTools::Convert(boolValue?this->TrueValue():this->FalseValue(), targetType);
 }
 
 IInspectable DoubleToObjectConverter::ConvertBack(IInspectable const&, TypeName const&, IInspectable const&, hstring const&)
