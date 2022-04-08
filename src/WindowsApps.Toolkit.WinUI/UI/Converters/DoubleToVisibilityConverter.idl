@@ -1,0 +1,10 @@
+import "UI/Converters/DoubleToObjectConverter.idl";
+
+namespace WindowsApps.Toolkit.WinUI.UI.Converters
+{
+    [default_interface]
+    runtimeclass DoubleToVisibilityConverter : DoubleToObjectConverter
+    {
+        DoubleToVisibilityConverter();
+    }
+}
