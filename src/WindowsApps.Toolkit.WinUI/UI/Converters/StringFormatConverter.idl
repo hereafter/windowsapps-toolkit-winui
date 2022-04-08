@@ -1,0 +1,9 @@
+namespace WindowsApps.Toolkit.WinUI.UI.Converters
+{
+    [default_interface]
+    runtimeclass StringFormatConverter : Microsoft.UI.Xaml.DependencyObject,
+        [default]Microsoft.UI.Xaml.Data.IValueConverter
+    {
+        StringFormatConverter();
+    }
+}

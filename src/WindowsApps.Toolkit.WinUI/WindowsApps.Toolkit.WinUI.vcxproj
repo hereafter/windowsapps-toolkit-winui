@@ -183,6 +183,10 @@
       <DependentUpon>UI\Converters\FileSizeToFriendlyStringConverter.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
+    <ClInclude Include="UI\Converters\StringFormatConverter.h">
+      <DependentUpon>UI\Converters\StringFormatConverter.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
     <ClInclude Include="UI\Converters\StringVisibilityConverter.h">
       <DependentUpon>UI\Converters\StringVisibilityConverter.idl</DependentUpon>
       <SubType>Code</SubType>
@@ -246,6 +250,10 @@
       <DependentUpon>UI\Converters\FileSizeToFriendlyStringConverter.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
+    <ClCompile Include="UI\Converters\StringFormatConverter.cpp">
+      <DependentUpon>UI\Converters\StringFormatConverter.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
     <ClCompile Include="UI\Converters\StringVisibilityConverter.cpp">
       <DependentUpon>UI\Converters\StringVisibilityConverter.idl</DependentUpon>
       <SubType>Code</SubType>
@@ -294,6 +302,9 @@
       <SubType>Designer</SubType>
     </Midl>
     <Midl Include="UI\Converters\FileSizeToFriendlyStringConverter.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="UI\Converters\StringFormatConverter.idl">
       <SubType>Designer</SubType>
     </Midl>
     <Midl Include="UI\Converters\StringVisibilityConverter.idl">

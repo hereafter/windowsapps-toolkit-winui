@@ -81,6 +81,9 @@
     <Midl Include="UI\Converters\FileSizeToFriendlyStringConverter.idl">
       <Filter>UI\Converters</Filter>
     </Midl>
+    <Midl Include="UI\Converters\StringFormatConverter.idl">
+      <Filter>UI\Converters</Filter>
+    </Midl>
   </ItemGroup>
   <ItemGroup>
     <None Include="WindowsApps.Toolkit.WinUI.def">
