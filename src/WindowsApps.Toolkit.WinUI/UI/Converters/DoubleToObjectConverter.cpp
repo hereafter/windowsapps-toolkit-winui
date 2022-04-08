@@ -168,6 +168,5 @@ IInspectable DoubleToObjectConverter::Convert(IInspectable const& value, TypeNam
 
 IInspectable DoubleToObjectConverter::ConvertBack(IInspectable const&, TypeName const&, IInspectable const&, hstring const&)
 {
-	hresult hr{ E_NOTIMPL };
-	throw_hresult(hr);
+	throw_hresult({ E_NOTIMPL });
 }

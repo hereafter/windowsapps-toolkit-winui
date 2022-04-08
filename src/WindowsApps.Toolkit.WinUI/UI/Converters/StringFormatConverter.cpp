@@ -4,6 +4,8 @@
 #include "UI.Converters.StringFormatConverter.g.cpp"
 #endif
 
+#include <format>
+
 using namespace winrt;
 using namespace winrt::Windows::Foundation;
 using namespace winrt::Windows::UI::Xaml::Interop;
@@ -12,11 +14,11 @@ using namespace winrt::WindowsApps::Toolkit::WinUI::UI::Converters::implementati
 
 
 IInspectable StringFormatConverter::Convert(IInspectable const& value, TypeName const& targetType, IInspectable const& parameter, hstring const& language)
-{
+{	
 	return nullptr;
 }
 
 IInspectable StringFormatConverter::ConvertBack(IInspectable const& value, TypeName const& targetType, IInspectable const& parameter, hstring const& language)
 {
-	return nullptr;
+	throw_hresult({ E_NOTIMPL });
 }

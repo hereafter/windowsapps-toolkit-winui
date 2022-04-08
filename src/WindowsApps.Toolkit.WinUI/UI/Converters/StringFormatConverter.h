@@ -1,6 +1,7 @@
 ﻿#pragma once
-
 #include "UI.Converters.StringFormatConverter.g.h"
+
+
 
 namespace winrt::WindowsApps::Toolkit::WinUI::UI::Converters::implementation
 {

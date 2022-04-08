@@ -80,7 +80,7 @@ IInspectable EmptyObjectToObjectConverter::Convert(IInspectable const& value, Ty
 
 IInspectable EmptyObjectToObjectConverter::ConvertBack(IInspectable const&, TypeName const&, IInspectable const&, hstring const&)
 {
-	winrt::throw_hresult(E_NOTIMPL);
+	throw_hresult({ E_NOTIMPL });
 }
 
 
