@@ -154,6 +154,10 @@
       <DependentUpon>UI\Converters\CollectionVisibilityConverter.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
+    <ClInclude Include="UI\Converters\ColorToDisplayNameConverter.h">
+      <DependentUpon>UI\Converters\ColorToDisplayNameConverter.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
     <ClInclude Include="UI\Converters\ConverterTools.h" />
     <ClInclude Include="UI\Converters\DoubleToObjectConverter.h">
       <DependentUpon>UI\Converters\DoubleToObjectConverter.idl</DependentUpon>
@@ -209,6 +213,10 @@
       <DependentUpon>UI\Converters\CollectionVisibilityConverter.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
+    <ClCompile Include="UI\Converters\ColorToDisplayNameConverter.cpp">
+      <DependentUpon>UI\Converters\ColorToDisplayNameConverter.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
     <ClCompile Include="UI\Converters\ConverterTools.cpp" />
     <ClCompile Include="UI\Converters\DoubleToObjectConverter.cpp">
       <DependentUpon>UI\Converters\DoubleToObjectConverter.idl</DependentUpon>
@@ -257,6 +265,9 @@
       <SubType>Designer</SubType>
     </Midl>
     <Midl Include="UI\Converters\CollectionVisibilityConverter.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="UI\Converters\ColorToDisplayNameConverter.idl">
       <SubType>Designer</SubType>
     </Midl>
     <Midl Include="UI\Converters\DoubleToObjectConverter.idl">

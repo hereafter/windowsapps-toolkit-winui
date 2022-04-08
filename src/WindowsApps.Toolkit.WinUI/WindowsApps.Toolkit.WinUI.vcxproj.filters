@@ -75,6 +75,9 @@
     <Midl Include="UI\Converters\VisibilityToBoolConverter.idl">
       <Filter>UI\Converters</Filter>
     </Midl>
+    <Midl Include="UI\Converters\ColorToDisplayNameConverter.idl">
+      <Filter>UI\Converters</Filter>
+    </Midl>
   </ItemGroup>
   <ItemGroup>
     <None Include="WindowsApps.Toolkit.WinUI.def">
