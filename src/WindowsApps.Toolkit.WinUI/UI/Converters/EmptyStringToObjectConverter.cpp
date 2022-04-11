@@ -9,5 +9,5 @@ using namespace winrt::WindowsApps::Toolkit::WinUI::UI::Converters::implementati
 
 bool EmptyStringToObjectConverter::CheckValueIsEmpty(IInspectable value)
 {
-	return value && !unbox_value_or<hstring>(value, L"").empty();
+	return !value && unbox_value_or<hstring>(value, L"").empty();
 }
